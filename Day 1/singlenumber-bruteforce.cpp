@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//Logic:looping each element twice and returning a number which has count of 1.
+//Time complexity O(n^2)
 int singleNumber(int nums[], int n)
 {
 

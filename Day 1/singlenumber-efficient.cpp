@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+//Logic:XOR of two same numbers is zero and number XOR 0 is the number so number which occurs odd is the final result.
 int singleNumber(int nums[],int n){
     int s=0;
     for(int i=0;i<n;i++){
