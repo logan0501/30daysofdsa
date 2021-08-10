@@ -1,6 +1,8 @@
 #include "bits/stdc++.h"
-//Brute force-counting number of nodes and inserting at the middle of the linked list by traversing again
 using namespace std;
+
+//Logic - two pointers, one moves fast and other slow,when fast pointers is at the end slow pointer will be at the middle of the list.
+
 typedef struct Node {
     int data;
     Node* next;
@@ -17,21 +19,25 @@ void printList(Node * head){
     }
 }
 Node* insertAtMiddle(Node* head,int key){
-    Node* temp=head;
-    int count=0;
-    while(temp!=NULL){
-        temp=temp->next;
-        count++;
-    }
-    int middle = (count-1)/2;
-    temp=head;
-    while(middle--){
-        temp=temp->next; 
-    }
-    Node* q=new Node(key);
-    q->next=temp->next;
-    temp->next=q;
-    return head;
+	Node* temp =new Node(key);
+	if(head==NULL){
+	    return temp;
+	}
+	Node* p = head;
+	Node* q = head;
+	while(q && q->next){
+	   
+	    q=q->next->next;
+	    
+	    if(q==NULL){
+	        break;
+	    }
+	    p=p->next;
+	    
+	}
+    temp->next=p->next;
+	p->next=temp;
+	return head;
 }
 int main(){
     int key;
