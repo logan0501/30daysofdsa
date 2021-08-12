@@ -28,6 +28,6 @@ int main(){
    first->next->next = new Node(2);
    first->next->next->next = new Node(3);
    first->next->next->next->next = new Node(3);
-
+    first = removeDuplicates(first);
     return 0;
 }
