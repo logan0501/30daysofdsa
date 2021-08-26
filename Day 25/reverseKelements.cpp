@@ -1,3 +1,5 @@
+// only function
+
 queue<int> modifyQueue(queue<int> q, int k)
 {
     //add code here.
